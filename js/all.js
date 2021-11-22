@@ -11,7 +11,7 @@ window.onscroll = () => {
     navbar.classList.remove('active');
 }
 
-
+// 商品價格 年 月 切換
 let year = document.querySelector('.pricing .price-toggler .year');
 let month = document.querySelector('.pricing .price-toggler .month');
 let yearAmount = document.querySelectorAll('.pricing .price .year');
@@ -41,4 +41,28 @@ month.onclick = () => {
 
 }
 
+
+// 成員 輪播
+let slides = document.querySelectorAll('.reviews .slide-container .slide');
+let index = 0;
+
+function next(){
+    slides[index].classList.remove('active');
+    index = (index + 1 ) % slides.length;
+    slides[index].classList.add('active');
+}
+
+function prev(){
+    slides[index].classList.remove('active');
+    index = (index - 1 + slides.length) % slides.length;
+    slides[index].classList.add('active');
+}
+
+
+// faq 
+document.querySelectorAll('.faq .accordion-container .accordion').forEach(accordion => {
+    accordion.onclick = () => {
+        accordion.classList.toggle('active');
+    }
+})
 
