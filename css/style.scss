@@ -561,9 +561,17 @@ section{
 
 .footer{
   background: $pink;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+ 
+ 
+
 
   .box-container{
+    width: 120%;
     @include grid(25rem);
+   
 
     .box{
 
